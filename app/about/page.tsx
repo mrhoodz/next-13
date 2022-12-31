@@ -1,5 +1,5 @@
 import React from 'react'
-import Components from './_components'
+import Components from './components'
 
 export default function page() {
   return (
