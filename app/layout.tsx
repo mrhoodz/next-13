@@ -1,5 +1,5 @@
 import "./globals.css";
-import styles from "./styles.module.css";
+import "./styles.css";
 
 export default function RootLayout({
   children,
@@ -15,7 +15,7 @@ export default function RootLayout({
       <head />
 
       <body>
-        <article className={styles.test}>HEADER</article>
+        <article className={"test"}>HEADER</article>
         {children}
       </body>
     </html>
