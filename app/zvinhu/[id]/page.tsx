@@ -7,11 +7,9 @@ async function getProduct(id: any) {
   //   cache: "no-store",
   // });
 
-  const response = await axios.post("http://localhost:3000/api/dummy", {
-    slug: id,
-  });
+  const response = await fetch(`https://dummyjson.com/products/${id}`);
 
-  const data = await response.data;
+  const data = await response.json();
   return data;
 }
 

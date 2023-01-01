@@ -9,13 +9,9 @@ async function getProduct(id: number) {
     price: number;
   }
 
-  try {
     const response = await fetch(`https://dummyjson.com/products/${id}`);
     const x: any = response.json();
     return x as productProps;
-  } catch (error) {
-    console.error(error);
-  }
 }
 
 
