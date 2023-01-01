@@ -17,16 +17,16 @@ async function getProduct(id: number) {
   }
 }
 
-export default async function page({params}: any) {
+export default async function page({ params }: any) {
   const products = await getProduct(params.id);
   const data = products;
-//   console.log(data);
+  //   console.log(data);
 
-  return <>
-  
-  <h1>{data?.title}</h1>
-  <p>{data?.description}</p>
-  <small>{data?.price}</small>
-  
-  </>;
+  return (
+    <>
+      <h1>{data?.title}</h1>
+      <p>{data?.description}</p>
+      <small>{data?.price}</small>
+    </>
+  );
 }

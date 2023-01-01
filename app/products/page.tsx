@@ -4,8 +4,12 @@ import axios from "axios";
 import Link from "next/link";
 
 async function getProduct() {
-  const response = await fetch("https://dummyjson.com/products",
- {cache: 'no-store'} );
+  // const response = await fetch("https://dummyjson.com/products", {
+  //   cache: "no-store",
+  // });
+
+  const response = await fetch("https://dummyjson.com/products?limit=90");
+
   const data = await response.json();
   return data;
 }
