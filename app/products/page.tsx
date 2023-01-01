@@ -24,7 +24,6 @@ export default async function page() {
 
   return (
     <>
-   
       <h1>All Products</h1>
       1234
       <ul>
