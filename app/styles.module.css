@@ -1,0 +1,13 @@
+.test{
+
+  background-color: aquamarine;
+  height: 90px;
+  width: 100%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  font-size: 28px;
+  
+  }
