@@ -1,6 +1,5 @@
 import React from "react";
 import Components from "./(components)";
-import axios from "axios";
 import Link from "next/link";
 import Head from "next/head";
 
@@ -9,9 +8,9 @@ async function getProduct() {
   //   cache: "no-store",
   // });
 
-  const response = await axios.get("https://dummyjson.com/products?limit=90");
+  const response = await fetch("https://dummyjson.com/products?limit=90");
 
-  const data = await response.data;
+  const data = await response.json();
   return data;
 }
 
