@@ -2,6 +2,7 @@ import React from "react";
 import Components from "./(components)";
 import axios from "axios";
 import Link from "next/link";
+import Head from "next/head";
 
 async function getProduct() {
   // const response = await fetch("https://dummyjson.com/products", {
@@ -24,6 +25,7 @@ export default async function page() {
 
   return (
     <>
+   
       <h1>All Products</h1>
       1234
       <ul>

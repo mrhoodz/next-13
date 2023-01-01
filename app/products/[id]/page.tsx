@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import Head from "next/head";
 
 async function getProduct(id: number) {
   interface productProps {
@@ -9,8 +10,9 @@ async function getProduct(id: number) {
   }
 
   try {
-    const response = await axios.get(`https://dummyjson.com/products/${id}`);
-    return response.data as productProps;
+    const response = await fetch(`https://dummyjson.com/products/${id}`);
+    const x: any = response.json();
+    return x as productProps;
     // console.log(response.data);
   } catch (error) {
     console.error(error);
@@ -21,6 +23,7 @@ export default async function page({ params }: any) {
   const products = await getProduct(params.id);
   const data = products;
   //   console.log(data);
+  const title = data?.title;
 
   return (
     <>
