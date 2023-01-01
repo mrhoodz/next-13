@@ -3,13 +3,18 @@ import Components from "./(components)";
 import axios from "axios";
 import Link from "next/link";
 import Head from "next/head";
+// import "../../pages/api/dummy.ts"
 
 async function getProduct() {
   // const response = await fetch("https://dummyjson.com/products", {
   //   cache: "no-store",
   // });
 
-  const response = await axios.get("https://dummyjson.com/products?limit=90");
+  const response = await axios.get("http://localhost:3000/api/dummy");
+
+  // const response = await axios.post("http://localhost:3000/api/dummy", {
+  //   slug: "all",
+  // });
 
   const data = await response.data;
   return data;
@@ -31,7 +36,7 @@ export default async function page() {
       <ul>
         {data.map((item: any) => (
           <li key={Math.random()}>
-            <Link href={`products/${item.id}`}>{item.title}</Link>
+            <Link href={`zvinhu/${item.id}`}>{item.title}</Link>
           </li>
         ))}
       </ul>
